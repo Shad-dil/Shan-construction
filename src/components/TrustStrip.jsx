@@ -25,6 +25,9 @@ export default function TrustStrip() {
   return (
     <section ref={ref} className="relative bg-white py-12">
       <div className="max-w-6xl mx-auto px-6">
+        <h2 className="flex justify-center items-center text-4xl font-bold pb-2">
+          Why Us
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {trustData.map((item, i) => (
             <TrustCard key={i} {...item} start={visible} />

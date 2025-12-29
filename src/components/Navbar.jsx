@@ -13,16 +13,17 @@ export default function Navbar({ companyName, phone }) {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-colors duration-300  ${
         scrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <div className="flex h-16 items-center justify-between px-6 text-white">
-        <img
+        {/* <img
           src="/logo.png"
           alt="Shan Construction"
           className="h-16 md:h-20 object-contain"
-        />
+        /> */}
+        <p>Your Company Logo</p>
 
         <a
           href="tel:+91..."

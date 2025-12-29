@@ -4,6 +4,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import TrustStrip from "./components/TrustStrip";
+import Reviews from "./components/Reviews";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar companyName={"SHAAN"} />
       <Hero />
       <TrustStrip />
+      <Reviews />
     </>
   );
 }
