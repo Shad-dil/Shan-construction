@@ -318,7 +318,7 @@ function Chatbot({ onClose }) {
     <div className="flex flex-col" style={{ height: "100%" }}>
       {/* Header */}
       <div
-        className="flex items-center gap-3 px-4 py-3 flex-shrink-0"
+        className="sticky top-0 z-20 flex items-center gap-3 px-4 py-3 flex-shrink-0"
         style={{ background: "linear-gradient(135deg,#128C7E,#054d41)" }}
       >
         <div className="w-11 h-11 rounded-full bg-gradient-to-br from-red-600 to-red-900 flex items-center justify-center text-white font-black text-lg border-2 border-white/25 shadow-lg flex-shrink-0">
@@ -1476,7 +1476,7 @@ export default function App() {
 
                     {/* Overlay CTA Button */}
                     <a
-                      href="https://www.google.com/maps/search/?api=1&query=Ekmighat+Road+Laheriasarai+Darbhanga+Bihar"
+                      href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.256471981254!2d85.87776837519587!3d26.12317937712662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39edb950e6599c7f%3A0xc09d73dd64cf1920!2sSufyan%20Traders%20%26%20Transport!5e0!3m2!1sen!2sin!4v1777614283709!5m2!1sen!2sin"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-red-700 hover:bg-amber-500 hover:text-neutral-900 text-white px-5 py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg transition-all duration-300"
