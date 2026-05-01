@@ -1463,12 +1463,16 @@ export default function App() {
 
                   <div className="relative w-full h-[300px] sm:h-[360px] md:h-[420px] rounded-2xl overflow-hidden border-2 border-gray-200 shadow-sm">
                     {/* Google Map */}
+
                     <iframe
-                      title="Sufyan Traders Location"
-                      src="https://www.google.com/maps?q=Ekmighat%20Road%2C%20Laheriasarai%2C%20Darbhanga%2C%20Bihar&output=embed"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.256471981254!2d85.87776837519587!3d26.12317937712662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39edb950e6599c7f%3A0xc09d73dd64cf1920!2sSufyan%20Traders%20%26%20Transport!5e0!3m2!1sen!2sin!4v1777614283709!5m2!1sen!2sin"
                       className="w-full h-full border-0"
                       loading="lazy"
-                    />
+                      allowfullscreen=""
+                      title="Sufyan Traders Location"
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
 
                     {/* Overlay CTA Button */}
                     <a
