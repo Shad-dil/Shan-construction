@@ -1458,94 +1458,32 @@ export default function App() {
               ) : (
                 <>
                   <h3 className="font-display text-xl sm:text-2xl font-black text-neutral-800 mb-6">
-                    📋 Quick Enquiry Form
+                    📍 Our Location
                   </h3>
-                  <div className="space-y-4">
-                    {[
-                      {
-                        k: "name",
-                        label: "Full Name",
-                        ph: "e.g. Rameshwar Prasad",
-                        t: "text",
-                      },
-                      {
-                        k: "phone",
-                        label: "Mobile Number",
-                        ph: "10-digit number",
-                        t: "tel",
-                      },
-                    ].map((f) => (
-                      <div key={f.k}>
-                        <label className="block font-label font-bold text-gray-500 text-[10px] tracking-widest uppercase mb-1.5">
-                          {f.label}
-                        </label>
-                        <input
-                          type={f.t}
-                          placeholder={f.ph}
-                          value={form[f.k]}
-                          onChange={(e) =>
-                            setForm((p) => ({ ...p, [f.k]: e.target.value }))
-                          }
-                          className={`w-full px-4 py-3 rounded-xl border-2 text-sm outline-none bg-gray-50 text-neutral-800 transition-colors focus:border-red-600
-                            ${form[f.k] ? "border-red-500" : "border-gray-200"}`}
-                        />
-                      </div>
-                    ))}
-                    <div>
-                      <label className="block font-label font-bold text-gray-500 text-[10px] tracking-widest uppercase mb-1.5">
-                        Product
-                      </label>
-                      <select
-                        value={form.product}
-                        onChange={(e) =>
-                          setForm((p) => ({ ...p, product: e.target.value }))
-                        }
-                        className={`w-full px-4 py-3 rounded-xl border-2 text-sm outline-none bg-gray-50 text-neutral-800 transition-colors focus:border-red-600
-                          ${form.product ? "border-red-500" : "border-gray-200"}`}
-                      >
-                        <option value="">-- Select Product --</option>
-                        {[
-                          "Cement",
-                          "Sand (Ballu)",
-                          "Stone Aggregate (Gitti)",
-                          "TMT Bar",
-                          "Bricks (Eent)",
-                          "Soil (Mitti)",
-                          "Transport",
-                          "Other",
-                        ].map((o) => (
-                          <option key={o}>{o}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block font-label font-bold text-gray-500 text-[10px] tracking-widest uppercase mb-1.5">
-                        Message / Quantity
-                      </label>
-                      <textarea
-                        placeholder="e.g. Need 200 bags ACC cement, deliver to Laheriasarai…"
-                        value={form.message}
-                        onChange={(e) =>
-                          setForm((p) => ({ ...p, message: e.target.value }))
-                        }
-                        rows={3}
-                        className={`w-full px-4 py-3 rounded-xl border-2 text-sm outline-none bg-gray-50 text-neutral-800 resize-y transition-colors focus:border-red-600
-                          ${form.message ? "border-red-500" : "border-gray-200"}`}
-                      />
-                    </div>
-                    <button
-                      onClick={() => {
-                        if (!form.name || !form.phone)
-                          return alert(
-                            "Please enter your name and phone number.",
-                          );
-                        setFormSent(true);
-                      }}
-                      className="w-full py-4 rounded-xl bg-gradient-to-r from-red-700 to-red-900 text-white font-label font-black text-sm tracking-widest uppercase hover:from-amber-500 hover:to-amber-600 hover:text-neutral-900 transition-all duration-300"
+
+                  <div className="relative w-full h-[300px] sm:h-[360px] md:h-[420px] rounded-2xl overflow-hidden border-2 border-gray-200 shadow-sm">
+                    {/* Google Map */}
+                    <iframe
+                      title="Sufyan Traders Location"
+                      src="https://www.google.com/maps?q=Ekmighat%20Road%2C%20Laheriasarai%2C%20Darbhanga%2C%20Bihar&output=embed"
+                      className="w-full h-full border-0"
+                      loading="lazy"
+                    />
+
+                    {/* Overlay CTA Button */}
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Ekmighat+Road+Laheriasarai+Darbhanga+Bihar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-red-700 hover:bg-amber-500 hover:text-neutral-900 text-white px-5 py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg transition-all duration-300"
                     >
-                      📤 Submit Enquiry
-                    </button>
+                      📍 Open in Maps App
+                    </a>
                   </div>
+
+                  <p className="mt-4 text-xs sm:text-sm text-gray-600 text-center leading-relaxed">
+                    Ekmighat Road, Laheriasarai, Darbhanga, Bihar
+                  </p>
                 </>
               )}
             </div>
