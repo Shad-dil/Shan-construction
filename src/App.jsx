@@ -107,9 +107,9 @@ const CHAT_STEPS = [
     bot: "Which *grade / type* of cement do you need?",
     showIf: (a) => a.product === "Cement",
     options: [
-      { label: "OPC 43 Grade", value: "OPC 43 Grade" },
-      { label: "OPC 53 Grade", value: "OPC 53 Grade" },
-      { label: "PPC (Blended)", value: "PPC Blended" },
+      { label: "PPC 53 Grade", value: "PPC 53 Grade" },
+      { label: "PSC 53 Grade", value: "PSC 53 Grade" },
+      { label: "PPS/PPC (Blended)", value: "PPC/PSC Blended" },
       { label: "Not Sure", value: "Not sure" },
       // ➕ ADD MORE GRADES HERE — e.g.:
       // { label: "White Cement", value: "White Cement" },
@@ -129,9 +129,8 @@ const CHAT_STEPS = [
     bot: "What *type of sand* do you need?",
     showIf: (a) => a.product === "Sand",
     options: [
-      { label: "River Sand", value: "River Sand" },
-      { label: "M-Sand", value: "M-Sand" },
-      { label: "Plaster Sand", value: "Plaster Sand" },
+      { label: "Large Size-Sand", value: "Large Size-Sand" },
+      { label: "Medium Size-Sand", value: "Medium Size-Sand" },
       { label: "Any Type", value: "Any Type" },
       // ➕ ADD MORE SAND TYPES HERE
     ],
@@ -149,7 +148,6 @@ const CHAT_STEPS = [
     bot: "What *aggregate size* do you need?",
     showIf: (a) => a.product === "Stone Aggregate",
     options: [
-      { label: "6mm (Fine)", value: "6mm" },
       { label: "10mm", value: "10mm" },
       { label: "20mm", value: "20mm" },
       { label: "40mm (Coarse)", value: "40mm" },
@@ -170,10 +168,11 @@ const CHAT_STEPS = [
     bot: "Which *TMT grade* do you need?",
     showIf: (a) => a.product === "TMT Steel Bar",
     options: [
-      { label: "Fe-415", value: "Fe-415" },
-      { label: "Fe-500", value: "Fe-500" },
-      { label: "Fe-500D", value: "Fe-500D" },
-      { label: "Fe-550", value: "Fe-550" },
+      { label: "Tata Tiscon 550 SD", value: "Tata Tiscon 550 SD (6mm to 20mm)" },
+      { label: "JindalPanther 550 D", value: "JindalPanther 550 D (6mm to 20mm)" },
+      { label: "Magodh TMT BAR", value: "Magodh TMT BAR (6mm to 20mm)" },
+      { label: "Malmukund - Super", value: "Balmukund - Super" },
+      { label: "Binding Wire and Cover Block", value: "Binding Wire and Cover Block" },
       { label: "Not Sure", value: "Not sure" },
       // ➕ ADD MORE TMT GRADES HERE — e.g.:
       // { label: "Fe-600", value: "Fe-600" },
@@ -234,8 +233,8 @@ const CHAT_STEPS = [
       // ── CEMENT quantity options ──────────────────────
       if (a.product === "Cement")
         return [
-          { label: "1–10 Bags", value: "1–10 Bags" },
-          { label: "10–50 Bags", value: "10–50 Bags" },
+          { label: "1–20 Bags", value: "1–20 Bags" },
+          { label: "20–50 Bags", value: "20–50 Bags" },
           { label: "50–200 Bags", value: "50–200 Bags" },
           { label: "200–500 Bags", value: "200–500 Bags" },
           { label: "500+ Bags (Bulk)", value: "500+ Bags" },
