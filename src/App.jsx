@@ -58,8 +58,14 @@ const CHAT_STEPS = [
     options: [
       { label: "🧱 Cement", value: "Cement" },
       { label: "🏖️ Sand (Ballu)", value: "Sand" },
-      { label: "🪨 Stone Aggregate", value: "Stone Aggregate" },
-      { label: "⚙️ TMT Steel Bar", value: "TMT Steel Bar" },
+      {
+        label: "🪨 Stone Aggregate (10mm-40mm)",
+        value: "Stone Aggregate (10mm-40mm)",
+      },
+      {
+        label: "⚙️ TMT Steel Bar (6mm-20mm)",
+        value: "TMT Steel Bar (6mm-20mm)",
+      },
       { label: "🏗️ Bricks (Eent)", value: "Bricks" },
       { label: "🌿 Filling Soil (Mitti)", value: "Filling Soil" },
       { label: "🚛 Transport Service", value: "Transport Service" },
@@ -146,7 +152,7 @@ const CHAT_STEPS = [
     key: "stone_size",
     type: "chips",
     bot: "What *aggregate size* do you need?",
-    showIf: (a) => a.product === "Stone Aggregate",
+    showIf: (a) => a.product === "Stone Aggregate (10mm-40mm)",
     options: [
       { label: "10mm", value: "10mm" },
       { label: "20mm", value: "20mm" },
@@ -166,13 +172,22 @@ const CHAT_STEPS = [
     key: "tmt_grade",
     type: "chips",
     bot: "Which *TMT grade* do you need?",
-    showIf: (a) => a.product === "TMT Steel Bar",
+    showIf: (a) => a.product === "TMT Steel Bar (6mm-20mm)",
     options: [
-      { label: "Tata Tiscon 550 SD", value: "Tata Tiscon 550 SD (6mm to 20mm)" },
-      { label: "JindalPanther 550 D", value: "JindalPanther 550 D (6mm to 20mm)" },
+      {
+        label: "Tata Tiscon 550 SD",
+        value: "Tata Tiscon 550 SD (6mm to 20mm)",
+      },
+      {
+        label: "JindalPanther 550 D",
+        value: "JindalPanther 550 D (6mm to 20mm)",
+      },
       { label: "Magodh TMT BAR", value: "Magodh TMT BAR (6mm to 20mm)" },
       { label: "Malmukund - Super", value: "Balmukund - Super" },
-      { label: "Binding Wire and Cover Block", value: "Binding Wire and Cover Block" },
+      {
+        label: "Binding Wire and Cover Block",
+        value: "Binding Wire and Cover Block",
+      },
       { label: "Not Sure", value: "Not sure" },
       // ➕ ADD MORE TMT GRADES HERE — e.g.:
       // { label: "Fe-600", value: "Fe-600" },
@@ -183,15 +198,14 @@ const CHAT_STEPS = [
     key: "tmt_size",
     type: "chips",
     bot: "What *diameter (size)* of TMT bar do you need?",
-    showIf: (a) => a.product === "TMT Steel Bar",
+    showIf: (a) => a.product === "TMT Steel Bar (6mm-20mm)",
     options: [
+      { label: "6mm", value: "6mm" },
       { label: "8mm", value: "8mm" },
       { label: "10mm", value: "10mm" },
       { label: "12mm", value: "12mm" },
       { label: "16mm", value: "16mm" },
       { label: "20mm", value: "20mm" },
-      { label: "25mm", value: "25mm" },
-      { label: "32mm", value: "32mm" },
       { label: "Multiple Sizes", value: "Multiple sizes needed" },
       // ➕ ADD MORE TMT SIZES HERE
     ],
@@ -318,7 +332,7 @@ const CHAT_STEPS = [
     id: "location",
     key: "location",
     type: "input",
-    bot: "📍 Your *delivery area / mohalla* in Darbhanga?",
+    bot: "📍 Your *delivery area / mohalla / Address* ?",
     placeholder: "e.g. Laheriasarai, Benta, Minapur…",
     showIf: (a) => a.delivery === "Yes, home delivery needed",
   },
